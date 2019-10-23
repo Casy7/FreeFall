@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+# Для регистрации модели добавить её в models
+models = [
+
+]
+
+for model in models:
+    admin.site.register(model)

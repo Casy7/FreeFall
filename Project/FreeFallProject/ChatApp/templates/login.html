@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="page-header">Вход в систему</h2>
+<div class="jumbotron">
+<form method="POST">
+    {%csrf_token%}
+    <table class="table table-inverse">
+        <thead>
+        </thead>
+        <tbody>
+            {% if error != '' %}
+            <p>Authentication error. Password or username is invalid.</p>
+            {% endif %}
+            <tr>
+                <td>Login/Email</td>
+                <td><input type="text" name="username" class="book"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" class="password"></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <input type="submit" class="btn btn-default" value="Войти">
+</form>
+</div>
+{% endblock %}
