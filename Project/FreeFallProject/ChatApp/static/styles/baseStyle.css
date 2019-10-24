@@ -1,27 +1,56 @@
-.header {
-    width: 100%;
-    height: 80px;
-    background: gray;
-  }
-  .content {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    float: left;
+    overflow: hidden;
+    width: 45px;
+    transition: width .5s;
+    background: rgb(19, 17, 17);
+}
+
+nav:hover,
+li {
+    width: 175px;
+}
+
+img{
+    width: 45px;
+    float: left;
+    background: rgb(71, 71, 80);
+}
+
+li {
+    clear: both;
+    list-style: none;
+}
+.content {
     width: 80%;
+    background: rgb(35, 35, 37);
     height: 800px;
-    float: right;
-  }
-  .sidebar {
-    width: 20%;
-    background: green;
-    height: 100px;
     float: left;
   }
-  .sidebar.fixed {
-    position: fixed;
-    right: 50%;
-    margin-right: -50%;
-  }
-  .footer {
+.header {
+    background: rgb(71, 71, 80);
     width: 100%;
-    background: gray;
-    height: 500px;
-    clear: both;
-  }
+    float: top;
+    height: 40px;
+}
+.btn{
+    background: rgb(71, 71, 80);
+    color: rgb(189, 189, 202);
+}
+.logo{
+    background: rgb(71, 71, 80);
+    color: rgb(189, 189, 202);
+}
+.logo{
+    width: 40px;
+    float: inline-end;
+    background: rgb(71, 71, 80);
+}
+.rightElement{
+    float: right;
+}
