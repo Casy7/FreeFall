@@ -1,29 +1,266 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2 class="page-header">Вход в систему</h2>
+<h1 class="page-header">Вход в систему</h1>
 <div class="jumbotron">
-<form method="POST">
-    {%csrf_token%}
-    <table class="table table-inverse">
-        <thead>
-        </thead>
-        <tbody>
-            {% if error != '' %}
-            <p>Authentication error. Password or username is invalid.</p>
-            {% endif %}
-            <tr>
-                <td>Login/Email</td>
-                <td><input type="text" name="username" class="book"></td>
-            </tr>
-            <tr>
-                <td>Password</td>
-                <td><input type="password" name="password" class="password"></td>
-            </tr>
+    <form method="POST">
+        {%csrf_token%}
+        <div class="login_table">
+            <table class="table table-inverse" style="wi">
+                <thead>
+                </thead>
 
-        </tbody>
-    </table>
+                <tbody>
+                    {% if error != '' %}
+                    <p>Authentication error. Password or username is invalid.</p>
+                    {% endif %}
+                    <tr>
+                        <td>Login/Email</td>
+                        <td><input type="text" name="username" class="book"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password" class="password"></td>
+                    </tr>
 
-    <input type="submit" class="btn btn-default" value="Войти">
-</form>
+                </tbody>
+            </table>
+
+            [25/Oct/2019 00:50:29] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1400
+[25/Oct/2019 00:50:29] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:51:40] "GET /login/ HTTP/1.1" 200 7965
+[25/Oct/2019 00:51:40] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 00:51:40] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:52:10] "GET /login/ HTTP/1.1" 200 7971
+[25/Oct/2019 00:52:10] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 00:52:10] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:53:43] "GET /login/ HTTP/1.1" 200 8017
+[25/Oct/2019 00:53:43] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 00:53:43] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:54:03] "GET /login/ HTTP/1.1" 200 8012
+[25/Oct/2019 00:54:03] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 00:54:03] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:54:08] "GET / HTTP/1.1" 200 12
+[25/Oct/2019 00:54:13] "GET /login/ HTTP/1.1" 200 8012
+[25/Oct/2019 00:55:01] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 00:55:01] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 00:55:01] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:56:40] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 00:56:40] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1389
+[25/Oct/2019 00:56:40] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:57:09] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 00:57:09] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1413
+[25/Oct/2019 00:57:09] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:57:27] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 00:57:27] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1413
+[25/Oct/2019 00:57:27] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:58:05] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 00:58:05] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1426
+[25/Oct/2019 00:58:05] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:58:21] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 00:58:21] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1426
+[25/Oct/2019 00:58:22] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:58:55] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 00:58:55] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1292
+[25/Oct/2019 00:58:55] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:59:14] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 00:59:14] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1292
+[25/Oct/2019 00:59:14] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:59:22] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 00:59:22] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1292
+[25/Oct/2019 00:59:22] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 00:59:37] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 00:59:37] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1292
+[25/Oct/2019 00:59:37] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:01:13] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 01:01:13] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1286
+[25/Oct/2019 01:01:13] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:01:28] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 01:01:28] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1286
+[25/Oct/2019 01:01:28] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:01:40] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 01:01:40] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1286
+[25/Oct/2019 01:01:40] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:01:49] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 01:01:49] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 01:01:49] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:02:11] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 01:02:11] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1292
+[25/Oct/2019 01:02:11] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:03:27] "GET /login/ HTTP/1.1" 200 7875
+[25/Oct/2019 01:03:27] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:03:27] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1391
+[25/Oct/2019 01:07:02] "GET /login/ HTTP/1.1" 200 8026
+[25/Oct/2019 01:07:02] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:07:02] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1298
+[25/Oct/2019 01:07:45] "GET /login/ HTTP/1.1" 200 8019
+[25/Oct/2019 01:07:46] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 01:07:46] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:08:22] "GET /login/ HTTP/1.1" 200 8011
+[25/Oct/2019 01:08:22] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:08:22] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1298
+
+(FreeFallEnv) z:\Repositories\FreeFall\Project\FreeFallProject>cd z:\Repositories\FreeFall\Project\FreeFallProject && cmd /C "set "ADSK_3DSMAX_x64_2020=Z:\1Ярослав\Приложения\3D\3D's Max\Files\3ds Max 2020\" && set "ALLUSERSPROFILE=C:\ProgramData" && set "AMD_ENTRYPOINT=vs/workbench/services/extensions/node/extensionHostProcess" && set "APPDATA=C:\Users\Ivan Sokolov\AppData\Roaming" && set "APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL=true" && set "CommonProgramFiles=C:\Program Files\Common Files" && set "CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files" && set "CommonProgramW6432=C:\Program Files\Common Files" && set "COMPUTERNAME=IVAN" && set "ComSpec=C:\Windows\system32\cmd.exe" && set "CUDA_CACHE_MAXSIZE=268435456" && set "DriverData=C:\Windows\System32\Drivers\DriverData" && set "ELECTRON_RUN_AS_NODE=1" && set "FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer" && set "FPS_BROWSER_USER_PROFILE_STRING=Default" && set "HOMEDRIVE=C:" && set "HOMEPATH=\Users\Ivan Sokolov" && set "LOCALAPPDATA=C:\Users\Ivan Sokolov\AppData\Local" && set "LOGONSERVER=\\IVAN" && set "NUMBER_OF_PROCESSORS=8" && set "OneDrive=C:\Users\Ivan Sokolov\OneDrive" && set "OneDriveConsumer=C:\Users\Ivan Sokolov\OneDrive" && set "OS=Windows_NT" && set "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" && set "PIPE_LOGGING=true" && set "PROCESSOR_ARCHITECTURE=AMD64" && set "PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 9, GenuineIntel" && set "PROCESSOR_LEVEL=6" && set "PROCESSOR_REVISION=9e09" && set "ProgramData=C:\ProgramData" &&
+set "ProgramFiles=C:\Program Files" && set "ProgramFiles(x86)=C:\Program Files (x86)" && set "ProgramW6432=C:\Program Files" && set "PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules" && set "PUBLIC=C:\Users\Public" && set "SESSIONNAME=Console" && set "SystemDrive=C:" && set "SystemRoot=C:\Windows" &&
+set "TEMP=C:\Users\IVANSO~1\AppData\Local\Temp" && set "TMP=C:\Users\IVANSO~1\AppData\Local\Temp" && set "USERDOMAIN=IVAN" && set "USERDOMAIN_ROAMINGPROFILE=IVAN" && set "USERNAME=Ivan Sokolov" && set "USERPROFILE=C:\Users\Ivan Sokolov" &&
+set "VERBOSE_LOGGING=true" && set "VRAY_SEND_FEEDBACK=0" && set "VSCODE_CWD=Z:\1Ярослав\Приложения\Компиляторы\Microsoft VS Code\Microsoft VS Code" && set "VSCODE_HANDLES_UNCAUGHT_ERRORS=true" && set "VSCODE_IPC_HOOK=\\.\pipe\cd3b87b7d2aff553afc9aa1d3c6160f3-1.39.2-main-sock" && set "VSCODE_IPC_HOOK_EXTHOST=\\.\pipe\vscode-ipc-bb51d5b2-b9c3-4e3c-bbff-20763fa2e030-sock" && set "VSCODE_LOGS=C:\Users\Ivan Sokolov\AppData\Roaming\Code\logs\20191024T192729" && set "VSCODE_LOG_STACK=false" && set "VSCODE_NLS_CONFIG={"locale":"ru","availableLanguages":{},"_languagePackSupport":true}" && set "VSCODE_NODE_CACHED_DATA_DIR=C:\Users\Ivan Sokolov\AppData\Roaming\Code\CachedData\6ab598523be7a800d7f3eb4d92d7ab9a66069390" && set "VSCODE_PID=8528" && set "windir=C:\Windows" && set "Path=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;Z:\1Ярослав\Приложения\Python\Git\cmd;Z:\1Ярослав\Приложения\JS\JavaScript\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Users\Ivan Sokolov\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\Ivan Sokolov\AppData\Local\Programs\Python\Python38-32\;C:\Inst\Python\Scripts\;C:\Inst\Python\;C:\Users\Ivan Sokolov\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\Ivan Sokolov\AppData\Roaming\npm;C:\Users\Ivan Sokolov\AppData\Local\atom\bin;Z:\1Ярослав\Приложения\Компиляторы\Microsoft VS Code\Microsoft VS Code\bin" && set "PYTHONIOENCODING=UTF-8" && set "PYTHONUNBUFFERED=1" && z:\Repositories\FreeFall\Project\FreeFallProject\FreeFallEnv\Scripts\python.exe "c:\Users\Ivan Sokolov\.vscode\extensions\ms-python.python-2019.10.44104\pythonFiles\ptvsd_launcher.py" --default --client --host localhost --port 61744 Z:\Repositories\FreeFall\Project\FreeFallProject\manage.py runserver --noreload "
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 25, 2019 - 01:09:46
+Django version 2.2.6, using settings 'FreeFallProject.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[25/Oct/2019 01:09:48] "GET /login/ HTTP/1.1" 200 7992
+[25/Oct/2019 01:09:48] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 01:09:48] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:10:30] "GET /login/ HTTP/1.1" 200 7959
+[25/Oct/2019 01:10:30] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 01:10:30] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:11:19] "GET /login/ HTTP/1.1" 200 7854
+[25/Oct/2019 01:11:20] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 01:11:20] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:11:48] "GET /login/ HTTP/1.1" 200 2725
+[25/Oct/2019 01:11:48] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 01:11:48] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:18:27] "GET /login/ HTTP/1.1" 200 2757
+[25/Oct/2019 01:18:28] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1456
+[25/Oct/2019 01:18:28] "GET /static/icons/logo.png HTTP/1.1" 200 54353
+Not Found: /favicon.ico
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 61859)
+Traceback (most recent call last):
+  File "c:\inst\python\Lib\socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "c:\inst\python\Lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "c:\inst\python\Lib\socketserver.py", line 720, in __init__
+    self.handle()
+  File "C:\Users\IVANSO~1\Envs\FREEFA~1\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\IVANSO~1\Envs\FREEFA~1\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "c:\inst\python\Lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] Программа на вашем хост-компьютере разорвала установленное подключение
+----------------------------------------
+Not Found: /favicon.ico
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 61871)
+Traceback (most recent call last):
+  File "c:\inst\python\Lib\socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "c:\inst\python\Lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "c:\inst\python\Lib\socketserver.py", line 720, in __init__
+    self.handle()
+  File "C:\Users\IVANSO~1\Envs\FREEFA~1\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\IVANSO~1\Envs\FREEFA~1\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "c:\inst\python\Lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] Программа на вашем хост-компьютере разорвала установленное подключение
+----------------------------------------
+[25/Oct/2019 01:18:54] "GET /login/ HTTP/1.1" 200 2757
+[25/Oct/2019 01:18:54] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 01:18:54] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:19:40] "GET /login/ HTTP/1.1" 200 2757
+[25/Oct/2019 01:19:40] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 01:19:41] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:20:31] "GET /login/ HTTP/1.1" 200 2757
+[25/Oct/2019 01:20:31] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1456
+[25/Oct/2019 01:20:31] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:20:39] "GET /login/ HTTP/1.1" 200 2757
+[25/Oct/2019 01:20:40] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1456
+[25/Oct/2019 01:20:40] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:21:00] "GET /login/ HTTP/1.1" 200 2757
+[25/Oct/2019 01:21:00] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1476
+[25/Oct/2019 01:21:00] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:21:10] "GET /login/ HTTP/1.1" 200 2757
+[25/Oct/2019 01:21:10] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1476
+[25/Oct/2019 01:21:11] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:21:35] "GET /login/ HTTP/1.1" 200 2757
+[25/Oct/2019 01:21:35] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1501
+[25/Oct/2019 01:21:35] "GET /static/icons/logo.png HTTP/1.1" 304 0
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\IVANSO~1\Envs\FREEFA~1\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\IVANSO~1\Envs\FREEFA~1\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\IVANSO~1\Envs\FREEFA~1\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\IVANSO~1\Envs\FREEFA~1\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\IVANSO~1\Envs\FREEFA~1\lib\site-packages\django\views\generic\base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "Z:\Repositories\FreeFall\Project\FreeFallProject\ChatApp\views.py", line 33, in post
+    validation = UserForm(request.POST)
+NameError: name 'UserForm' is not defined
+[25/Oct/2019 01:22:57] "POST /login/ HTTP/1.1" 500 80631
+[25/Oct/2019 01:23:52] "GET /login/ HTTP/1.1" 200 2757
+[25/Oct/2019 01:23:52] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1499
+[25/Oct/2019 01:23:52] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:24:10] "GET /login/ HTTP/1.1" 200 2757
+[25/Oct/2019 01:24:10] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1499
+[25/Oct/2019 01:24:10] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:24:23] "GET /login/ HTTP/1.1" 200 2757
+[25/Oct/2019 01:24:23] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1499
+[25/Oct/2019 01:24:24] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:25:38] "GET /login/ HTTP/1.1" 200 2757
+[25/Oct/2019 01:25:38] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1501
+[25/Oct/2019 01:25:39] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:27:07] "GET /login/ HTTP/1.1" 200 2764
+[25/Oct/2019 01:27:07] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 01:27:07] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:27:52] "GET /login/ HTTP/1.1" 200 2764
+[25/Oct/2019 01:27:53] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1502
+[25/Oct/2019 01:27:53] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:28:05] "GET /login/ HTTP/1.1" 200 2764
+[25/Oct/2019 01:28:05] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1502
+[25/Oct/2019 01:28:06] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:28:18] "GET /login/ HTTP/1.1" 200 2764
+[25/Oct/2019 01:28:18] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1502
+[25/Oct/2019 01:28:18] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:28:26] "GET /login/ HTTP/1.1" 200 2764
+[25/Oct/2019 01:28:26] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1502
+[25/Oct/2019 01:28:26] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:28:33] "GET /login/ HTTP/1.1" 200 2764
+[25/Oct/2019 01:28:34] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1502
+[25/Oct/2019 01:28:34] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:29:42] "GET /login/ HTTP/1.1" 200 2764
+[25/Oct/2019 01:29:42] "GET /static/styles/baseStyle.css HTTP/1.1" 304 0
+[25/Oct/2019 01:29:42] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:29:48] "GET / HTTP/1.1" 200 12
+[25/Oct/2019 01:40:18] "GET /login/ HTTP/1.1" 200 2775
+[25/Oct/2019 01:40:18] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1530
+[25/Oct/2019 01:40:19] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:43:08] "GET /login/ HTTP/1.1" 200 2960
+[25/Oct/2019 01:43:08] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1537
+[25/Oct/2019 01:43:09] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:43:31] "GET /login/ HTTP/1.1" 200 2960
+[25/Oct/2019 01:43:31] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1542
+[25/Oct/2019 01:43:31] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:46:44] "GET /login/ HTTP/1.1" 200 2960
+[25/Oct/2019 01:46:44] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1537
+[25/Oct/2019 01:46:45] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:48:26] "GET /login/ HTTP/1.1" 200 2960
+[25/Oct/2019 01:48:26] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1562
+[25/Oct/2019 01:48:26] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:48:42] "GET /login/ HTTP/1.1" 200 2960
+[25/Oct/2019 01:48:43] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1560
+[25/Oct/2019 01:48:43] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:48:50] "GET /login/ HTTP/1.1" 200 2960
+[25/Oct/2019 01:48:50] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1562
+[25/Oct/2019 01:48:50] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:50:35] "GET /login/ HTTP/1.1" 200 2960
+[25/Oct/2019 01:50:35] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1584
+[25/Oct/2019 01:50:36] "GET /static/icons/logo.png HTTP/1.1" 304 0
+[25/Oct/2019 01:51:00] "GET /login/ HTTP/1.1" 200 2960
+[25/Oct/2019 01:51:00] "GET /static/styles/baseStyle.css HTTP/1.1" 200 1606
+[25/Oct/2019 01:51:00] "GET /static/icons/logo.png HTTP/1.1" 304 0
+        </div>
+        <input type="submit" class="btn btn-default" value="Войти">
+    </form>
 </div>
 {% endblock %}

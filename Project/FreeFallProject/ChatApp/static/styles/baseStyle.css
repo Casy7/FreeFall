@@ -1,38 +1,49 @@
+
 * {
     margin: 0;
     padding: 0;
 }
 
-nav {
+.sidebar {
+    top: 40px;
+    position: fixed;
     float: left;
     overflow: hidden;
     width: 45px;
-    transition: width .5s;
+    transition: width .3s;
     background: rgb(19, 17, 17);
 }
 
 nav:hover,
 li {
     width: 175px;
+    clear: both;
+    list-style: none;
 }
 
 img{
     width: 45px;
     float: left;
     background: rgb(71, 71, 80);
+    height: 48px;
 }
 
 li {
-    clear: both;
-    list-style: none;
+
 }
 .content {
-    width: 80%;
+    transition: width .3s;
+    overflow: visible ;
+    width: 97%;
     background: rgb(35, 35, 37);
-    height: 800px;
-    float: left;
+    height: 100%;
+    float: right;
+  }
+.content:hover {
+    width: 90%;
   }
 .header {
+    position: fixed;
     background: rgb(71, 71, 80);
     width: 100%;
     float: top;
@@ -41,16 +52,52 @@ li {
 .btn{
     background: rgb(71, 71, 80);
     color: rgb(189, 189, 202);
+    border-radius: 0px;
+    height: 40px;
 }
+
 .logo{
-    background: rgb(71, 71, 80);
-    color: rgb(189, 189, 202);
-}
-.logo{
-    width: 40px;
+    width: 38px;
     float: inline-end;
     background: rgb(71, 71, 80);
+    height: 39px;
+    
+}
+.logo:active, .logo:hover{
+    border: 0.5px solid rgb(230, 167, 33);
+    
 }
 .rightElement{
     float: right;
+}
+a{
+    color: rgb(182, 182, 182);
+}
+a:link,a:active,a:hover{
+    color: rgb(201, 139, 25);
+}
+.sidebar_btn{
+    background: rgba(71, 71, 80, 0);
+    color: rgb(189, 189, 202);
+    width: 175px;
+    height: 50px;
+    border: none;
+    text-align: left;
+}
+
+.sidebar_btn:active, .sidebar_btn:hover,.btn:hover{
+    border: 0.5px solid rgb(230, 167, 33);
+}
+h1{
+    font-weight: 600;
+    font-size: 40;
+    text-align: center;
+    margin: 0 0 1.2em;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+}
+.login_table{
+    position: relative;
+    width: 100%;
 }
