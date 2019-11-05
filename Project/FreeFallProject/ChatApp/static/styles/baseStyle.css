@@ -7,19 +7,28 @@
 .sidebar {
     top: 40px;
     position: fixed;
+    height: 100%;
     float: left;
     overflow: hidden;
-    width: 45px;
+    width: 3.5%;
     transition: width .3s;
     background: rgb(19, 17, 17);
 }
-
-nav:hover,
-li {
-    width: 175px;
+.sidebar:hover {
+    width: 13%;
     clear: both;
     list-style: none;
 }
+.sidebar_btn{
+    background: rgba(71, 71, 80, 0);
+    color: rgb(189, 189, 202);
+    width: 100%;
+    height: 50px;
+    border: none;
+    text-align: left;
+    display: flex;
+}
+
 
 img{
     width: 45px;
@@ -28,19 +37,17 @@ img{
     height: 48px;
 }
 
-li {
-
-}
 .content {
     transition: width .3s;
-    overflow: visible ;
-    width: 97%;
+    overflow: auto;
+    width: 87%;
     background: rgb(35, 35, 37);
     height: 100%;
     float: right;
   }
-.content:hover {
-    width: 90%;
+
+.content:checked {
+    width: 96.5%;
   }
 .header {
     position: fixed;
@@ -76,19 +83,13 @@ a{
 a:link,a:active,a:hover{
     color: rgb(201, 139, 25);
 }
-.sidebar_btn{
-    background: rgba(71, 71, 80, 0);
-    color: rgb(189, 189, 202);
-    width: 175px;
-    height: 50px;
-    border: none;
-    text-align: left;
-}
+
 
 .sidebar_btn:active, .sidebar_btn:hover,.btn:hover{
     border: 0.5px solid rgb(230, 167, 33);
 }
 h1{
+    padding: 15px;
     font-weight: 600;
     font-size: 40;
     text-align: center;
@@ -96,8 +97,4 @@ h1{
     text-transform: uppercase;
     line-height: 1.2em;
     font-family: 'Montserrat', sans-serif;
-}
-.login_table{
-    position: relative;
-    width: 100%;
 }

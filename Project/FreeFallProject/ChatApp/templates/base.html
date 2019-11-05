@@ -12,7 +12,10 @@
 </head>
 
 <body>
-    <div class="header">
+
+    </div>    <div class="content">
+        {%block content%} {%endblock%}
+    </div>    <div class="header">
         <div>
             <a href="/login"><button type="button" class="btn">Login</button></a>
             <a href="/"><button type="button" class="btn">Posts</button></a>
@@ -21,8 +24,7 @@
             <a href="#">
             <div class="logo"><img class="logo" src="{% static '/icons/logo.png' %}" ></div>
         </div>
-    </div>
-    <nav class="sidebar">
+    <nav class="sidebar" id = "sidebar1">
         <ul>
             <li><a href="#"><button type="button" class="sidebar_btn"><img class="icon"
                             src="https://gitlab.com/uploads/-/system/user/avatar/4166319/avatar.png?width=400">Профиль</button>
@@ -40,9 +42,7 @@
 
 
     </nav>
-    <nav class="content">
-        {%block content%} {%endblock%}
-    </nav>
+
     <!--<div class="footer">FOOTER</div>-->
 </body>
 

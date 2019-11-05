@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
+<link href="{% static 'styles/Login.css' %}" rel="stylesheet">
 <h1 class="page-header">Вход в систему</h1>
-<div class="jumbotron">
+<div class="login_table">
     <form method="POST">
         {%csrf_token%}
         <div class="login_table">
